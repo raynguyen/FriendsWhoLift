@@ -5,27 +5,46 @@
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:weightSum="1"
     tools:context=".MainActivity">
 
+    <!-- Check to see if commit works!-->
 
     <TextView
-        android:id="@+id/SummaryBox"
-        android:layout_width="125dp"
+        android:id="@+id/liftsSummary"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/summary_title"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0" />
+        android:layout_weight="1"
+        android:textSize="20sp"
+        android:singleLine="true"/>
 
     <TextView
-        android:id="@+id/LiftsSummary"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        app:layout_constraintTop_toBottomOf="@+id/SummaryBox"
+        android:id="@+id/squatSummary"
+        android:text="Your squat details here"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@+id/liftsSummary"
+        />
 
+    <TextView
+        android:id="@+id/benchSummary"
+        android:text="Your bench details here"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@+id/squatSummary"
+        />
+
+    <TextView
+        android:id="@+id/deadSummary"
+        android:text="Your deadlift details here"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@+id/benchSummary"
         />
 </android.support.constraint.ConstraintLayout>
