@@ -12,6 +12,7 @@
 
     <TextView
         android:id="@+id/liftsSummary"
+        android:text="@string/summary_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -20,7 +21,7 @@
 
     <TextView
         android:id="@+id/squatSummary"
-        android:text="Your squat details here"
+        android:text="@string/squat_txthldr"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
@@ -30,7 +31,7 @@
 
     <TextView
         android:id="@+id/benchSummary"
-        android:text="Your bench details here"
+        android:text="@string/bench_txthldr"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
@@ -40,11 +41,27 @@
 
     <TextView
         android:id="@+id/deadSummary"
-        android:text="Your deadlift details here"
+        android:text="@string/dead_txthldr"
         android:layout_width="0dp"
         android:layout_weight="0.5"
         android:layout_height="wrap_content"
         android:singleLine="true"
         app:layout_constraintTop_toBottomOf="@+id/benchSummary"
         />
+
+    <EditText
+        android:id="@+id/prInput"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:layout_width="0dp"
+        android:singleLine="true"
+        android:autofillHints="@string/input_txthldr"
+        android:hint="@string/input_txthldr"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/deadSummary"
+
+        android:imeOptions="actionDone"
+
+        />
+
 </android.support.constraint.ConstraintLayout>

@@ -5,10 +5,14 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,7 +41,23 @@ public class MainActivity extends AppCompatActivity {
         benchView.setText(bench_message);
         deadView.setText(dead_message);
 
+        EditText prInput = findViewById(R.id.prInput);
+        prInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView prInput, int inputDone, KeyEvent event) {
+                if (inputDone == EditorInfo.IME_ACTION_DONE){
+                    //Stores the value user inputs if user hits the done button
+                    String inputString = prInput.getText().toString();
+                    Toast.makeText(MainActivity.this, "Your pr input is: " + inputString, Toast.LENGTH_SHORT).show();
+                }
+                return false;
+            }
+        });
     }
+
+
+
+
 
     /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
