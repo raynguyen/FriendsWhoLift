@@ -10,7 +10,10 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -53,10 +56,20 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        /*The snippet below creates the spinner dropdown to select the lift type.
+          The dropdown is populated from an array-string that is defined the in strings resource.
+          ToDo: Need to learn more about adapters! An adapter needs to be created.
+        */
+        Spinner prSpinner = findViewById(R.id.prLiftList);
+        /*ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.lift_types,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        prSpinner.setAdapter(adapter);
+        */
+
+        //ToDo: Need to implement onItemSelectedListener for the Spinner and execute according to selection
+        //The plan is to store and overwrite data according to selection.
     }
-
-
-
 
 
     /*@Override
