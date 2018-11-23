@@ -59,9 +59,22 @@
         android:hint="@string/input_txthldr"
         android:inputType="numberDecimal"
         app:layout_constraintTop_toBottomOf="@+id/deadSummary"
-
         android:imeOptions="actionDone"
-
         />
+
+    <Spinner
+        android:id="@+id/liftsSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/prInput"
+        app:layout_constraintStart_toEndOf="@+id/prInput" />
+
+    <Button
+        android:id="@+id/addPR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="222dp" />
 
 </android.support.constraint.ConstraintLayout>

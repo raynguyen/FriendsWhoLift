@@ -61,16 +61,15 @@ public class MainActivity extends AppCompatActivity {
           The dropdown is populated from an array-string that is defined the in strings resource.
           ToDo: Need to learn more about adapters! An adapter needs to be created.
         */
-        Spinner prSpinner = findViewById(R.id.prLiftList);
-        /*ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.lift_types,android.R.layout.simple_spinner_item);
+        Spinner liftsSpinner = findViewById(R.id.liftsSpinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.array_liftsSpinner,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        prSpinner.setAdapter(adapter);
-        */
+        liftsSpinner.setAdapter(adapter);
+
 
         //ToDo: Need to implement onItemSelectedListener for the Spinner and execute according to selection
         //The plan is to store and overwrite data according to selection.
     }
-
 
     /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -94,5 +93,3 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }*/
 }
-
-#This is some test
